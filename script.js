@@ -25,7 +25,10 @@ document.getElementById("remove-button").addEventListener("click", () => {
 function changeLevel(change) {
     // validate argument, since only 1 weapon is available at lv1 we
     // don't allow the user to set it that low
-    if (userLevel >= 30 || userLevel <= 2) {
+    if (userLevel >= 30 && change > 0) {
+        return;
+    }
+    if (userLevel <= 2 && change < 0) {
         return;
     }
     userLevel += change;
@@ -41,7 +44,7 @@ function changeLevel(change) {
     // Clear recents
     recents = [];
 
-    // Trigger a new item generation after the level is changed
+    // trigger a new item generation after the level is changed
     generate();
 }
 
@@ -54,6 +57,7 @@ function generate() {
     let item = getRandomItem();
     let iterations = 0;
 
+    // generate until something is found that meets criteria
     while (
         item.level > userLevel ||
         blacklist.includes(item.main) ||
@@ -65,11 +69,13 @@ function generate() {
         // );
 
         iterations++;
-        if (iterations > maxIterationsBeforeBreak) break;
+        if (iterations > maxIterationsBeforeBreak) break; // failsafe
     }
 
+    // debug
     console.log(`iterations: ${iterations}, recents: ${recents}`);
 
+    // keep track of recent rolls to make results more varied
     recents.push(item.main);
     if (recents.length > recentsMaxSize) {
         recents.shift();
@@ -107,13 +113,13 @@ fetch("./items.json")
     })
     .then((data) => {
         console.log("Data fetched successfully:", data);
-        items = data; // Directly assign the fetched array to items
+        items = data; // set items to the fetched array
 
         if (!Array.isArray(items)) {
             throw new Error("Items data is not an array");
         }
 
-        // Initial generation
+        // generate a set when user loads the page
         generate();
     })
     .catch((error) => console.error("Error loading items.json:", error));

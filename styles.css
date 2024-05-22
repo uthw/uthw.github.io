@@ -1,18 +1,30 @@
 body {
     background-color: #dab6e6;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    width: 540px;
+    width: 100%;
+    max-width: 540px;
     margin: auto;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .images img {
-    width: 150px;
-    height: 150px;
-    margin: 10px;
+    width: 30%;
+    max-width: 150px;
+    height: auto;
 }
 
 .controls {
@@ -23,4 +35,11 @@ button {
     padding: 10px 20px;
     margin: 5px;
     font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .images img {
+        width: 80px;
+        height: auto;
+    }
 }
