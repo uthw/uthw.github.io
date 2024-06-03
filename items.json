@@ -24,13 +24,13 @@
         "level": "24"
     },
     {
-        "main": ".52 gal",
+        "main": "52 gal",
         "sub": "splash wall",
         "special": "killer wail",
         "level": "11"
     },
     {
-        "main": ".96 gal",
+        "main": "96 gal",
         "sub": "sprinkler",
         "special": "ink vac",
         "level": "17"
@@ -396,7 +396,7 @@
         "level": "15"
     },
     {
-        "main": ".96 gal deco",
+        "main": "96 gal deco",
         "sub": "splash wall",
         "special": "kraken royale",
         "level": "23"
@@ -654,7 +654,7 @@
         "level": "25"
     },
     {
-        "main": ".52 gal deco",
+        "main": "52 gal deco",
         "sub": "curling bomb",
         "special": "splattercolor screen",
         "level": "14"
