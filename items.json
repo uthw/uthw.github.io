@@ -718,5 +718,65 @@
         "sub": "angle shooter",
         "special": "big bubbler",
         "level": "13"
+    },
+    {
+        "main": "bamboozler 14 mk ii",
+        "sub": "fizzy bomb",
+        "special": "super chump",
+        "level": "26"
+    },
+    {
+        "main": "charcoal decavitator",
+        "sub": "splash wall",
+        "special": "inkjet",
+        "level": "25"
+    },
+    {
+        "main": "custom douser dualies ff",
+        "sub": "burst bomb",
+        "special": "triple inkstrike",
+        "level": "27"
+    },
+    {
+        "main": "custom hydra splatling",
+        "sub": "ink mine",
+        "special": "splattercolor screen",
+        "level": "23"
+    },
+    {
+        "main": "custom range blaster",
+        "sub": "splat bomb",
+        "special": "kraken royale",
+        "level": "15"
+    },
+    {
+        "main": "custom wellstring v",
+        "sub": "point sensor",
+        "special": "wavebreaker",
+        "level": "24"
+    },
+    {
+        "main": "heavy edit splatling nouveau",
+        "sub": "splat bomb",
+        "special": "crab tank",
+        "level": "17"
+    },
+    {
+        "main": "mint decavitator",
+        "sub": "suction bomb",
+        "special": "big bubbler",
+        "level": "21"
+    },
+    {
+        "main": "recycled brella 24 mk ii",
+        "sub": "toxic mist",
+        "special": "triple splashdown",
+        "level": "20"
+    },
+    {
+        "main": "wellstring v",
+        "sub": "autobomb",
+        "special": "ultra stamp",
+        "level": "19"
     }
 ]
