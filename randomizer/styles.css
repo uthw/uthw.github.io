@@ -13,7 +13,7 @@ body {
     padding: 30px;
     box-sizing: border-box;
     font-family: "Source Sans 3", sans-serif;
-    background-color: #c6d9d9; /*for the box with the info inside*/
+    background-color: #e2e2e2; /*for the box with the info inside*/
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }

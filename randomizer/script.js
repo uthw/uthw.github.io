@@ -4,6 +4,7 @@ let recentsMaxSize = 5;
 const maxIterationsBeforeBreak = 100000;
 let blacklist = [];
 let items = [];
+let dlcActive = true;
 
 document.getElementById("generate-button").addEventListener("click", () => {
     console.log("Generate button clicked");
@@ -20,6 +21,15 @@ document.getElementById("plus-button").addEventListener("click", () => {
 document.getElementById("remove-button").addEventListener("click", () => {
     console.log("Remove button clicked");
     removeItem();
+});
+document.getElementById("dlc-button").addEventListener("click", () => {
+    console.log("DLC button clicked");
+    dlcActive = !dlcActive;
+    if (dlcActive) {
+        document.getElementById("dlc-button").innerText = "DLC On";
+    } else {
+        document.getElementById("dlc-button").innerText = "DLC Off";
+    }
 });
 
 function changeLevel(change) {
@@ -73,7 +83,7 @@ function generate() {
     }
 
     // debug
-    console.log(`iterations: ${iterations}, recents: ${recents}`);
+    console.log(`iterations: ${iterations}, recents: ${JSON.stringify(recents)}`);
 
     // keep track of recent rolls to make results more varied
     recents.push(item.main);
@@ -81,8 +91,18 @@ function generate() {
         recents.shift();
     }
 
-    document.getElementById("item-name").innerText = item.main;
-    document.getElementById("main-image").src = `sprites/main/${item.main}.png`;
+    if (item.dlc && dlcActive) {
+        document.getElementById("item-name").innerText = item.dlc;
+        document.getElementById(
+            "main-image"
+        ).src = `sprites/main/dlc/${item.dlc}.png`;
+    } else {
+        document.getElementById("item-name").innerText = item.main;
+        document.getElementById(
+            "main-image"
+        ).src = `sprites/main/${item.main}.png`;
+    }
+
     document.getElementById("sub-image").src = `sprites/sub/${item.sub}.png`;
     document.getElementById(
         "special-image"

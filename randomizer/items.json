@@ -9,7 +9,8 @@
         "main": "tri-stringer",
         "sub": "ink mine",
         "special": "killer wail",
-        "level": "4"
+        "level": "4",
+        "dlc": "order stringer replica"
     },
     {
         "main": "undercover brella",
@@ -147,7 +148,8 @@
         "main": "heavy splatling",
         "sub": "sprinkler",
         "special": "wavebreaker",
-        "level": "4"
+        "level": "4",
+        "dlc": "order splatling replica"
     },
     {
         "main": "hydra splatling",
@@ -177,7 +179,8 @@
         "main": "luna blaster",
         "sub": "splat bomb",
         "special": "zipcaster",
-        "level": "13"
+        "level": "13",
+        "dlc": "order blaster replica"
     },
     {
         "main": "mini splatling",
@@ -201,7 +204,8 @@
         "main": "octobrush",
         "sub": "suction bomb",
         "special": "zipcaster",
-        "level": "4"
+        "level": "4",
+        "dlc": "order brush replica"
     },
     {
         "main": "range blaster",
@@ -231,7 +235,8 @@
         "main": "slosher",
         "sub": "splat bomb",
         "special": "triple inkstrike",
-        "level": "3"
+        "level": "3",
+        "dlc": "order slosher replica"
     },
     {
         "main": "sloshing machine",
@@ -249,31 +254,36 @@
         "main": "splat brella",
         "sub": "sprinkler",
         "special": "triple inkstrike",
-        "level": "5"
+        "level": "5",
+        "dlc": "order brella replica"
     },
     {
         "main": "splat charger",
         "sub": "splat bomb",
         "special": "ink vac",
-        "level": "2"
+        "level": "2",
+        "dlc": "order charger replica"
     },
     {
         "main": "splat dualies",
         "sub": "suction bomb",
         "special": "crab tank",
-        "level": "3"
+        "level": "3",
+        "dlc": "order dualie replicas"
     },
     {
         "main": "splat roller",
         "sub": "curling bomb",
         "special": "big bubbler",
-        "level": "2"
+        "level": "2",
+        "dlc": "order roller replica"
     },
     {
         "main": "splatana stamper",
         "sub": "burst bomb",
         "special": "zipcaster",
-        "level": "14"
+        "level": "14",
+        "dlc": "order splatana replica"
     },
     {
         "main": "splatana wiper",
@@ -291,7 +301,8 @@
         "main": "splattershot",
         "sub": "suction bomb",
         "special": "trizooka",
-        "level": "2"
+        "level": "2",
+        "dlc": "order shot replica"
     },
     {
         "main": "splattershot jr.",
@@ -357,7 +368,8 @@
         "main": "tentatek splattershot",
         "sub": "splat bomb",
         "special": "triple inkstrike",
-        "level": "10"
+        "level": "10",
+        "dlc": "octo shot replica"
     },
     {
         "main": "forge splattershot pro",
