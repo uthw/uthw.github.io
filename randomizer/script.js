@@ -4,7 +4,7 @@ let recentsMaxSize = 5;
 const maxIterationsBeforeBreak = 100000;
 let blacklist = [];
 let items = [];
-let dlcActive = true;
+let dlcActive = 1; // 0: DLC Off, 1: DLC Sometimes, 2: DLC On
 
 document.getElementById("generate-button").addEventListener("click", () => {
     console.log("Generate button clicked");
@@ -24,13 +24,20 @@ document.getElementById("remove-button").addEventListener("click", () => {
 });
 document.getElementById("dlc-button").addEventListener("click", () => {
     console.log("DLC button clicked");
-    dlcActive = !dlcActive;
-    if (dlcActive) {
-        document.getElementById("dlc-button").innerText = "DLC On";
-    } else {
-        document.getElementById("dlc-button").innerText = "DLC Off";
-    }
+    dlcActive = (dlcActive + 1) % 3; // Cycle through 0, 1, 2
+    updateDlcButton();
 });
+
+function updateDlcButton() {
+    const dlcButton = document.getElementById("dlc-button");
+    if (dlcActive == 0) {
+        dlcButton.innerText = "DLC: Off";
+    } else if (dlcActive == 1) {
+        dlcButton.innerText = "DLC: 50%";
+    } else if (dlcActive == 2) {
+        dlcButton.innerText = "DLC: On";
+    }
+}
 
 function changeLevel(change) {
     // validate argument, since only 1 weapon is available at lv1 we
@@ -83,7 +90,9 @@ function generate() {
     }
 
     // debug
-    console.log(`iterations: ${iterations}, recents: ${JSON.stringify(recents)}`);
+    console.log(
+        `iterations: ${iterations}, recents: ${JSON.stringify(recents)}`
+    );
 
     // keep track of recent rolls to make results more varied
     recents.push(item.main);
@@ -91,7 +100,12 @@ function generate() {
         recents.shift();
     }
 
-    if (item.dlc && dlcActive) {
+    if (item.dlc && dlcActive == 2) {
+        document.getElementById("item-name").innerText = item.dlc;
+        document.getElementById(
+            "main-image"
+        ).src = `sprites/main/dlc/${item.dlc}.png`;
+    } else if (item.dlc && dlcActive == 1 && Math.random() < 0.5) {
         document.getElementById("item-name").innerText = item.dlc;
         document.getElementById(
             "main-image"
@@ -143,3 +157,6 @@ fetch("./items.json")
         generate();
     })
     .catch((error) => console.error("Error loading items.json:", error));
+
+// Initialize the DLC button text
+updateDlcButton();
