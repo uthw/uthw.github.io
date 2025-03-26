@@ -1,10 +1,10 @@
-let userLevel = 30;
+let userLevel = parseInt(localStorage.getItem("userLevel")) || 30;
 let recents = [];
 let recentsMaxSize = 5;
 const maxIterationsBeforeBreak = 100000;
 let blacklist = [];
 let items = [];
-let dlcActive = 1; // 0: DLC Off, 1: DLC Sometimes, 2: DLC On
+let dlcActive = parseInt(localStorage.getItem("dlcActive")) != null ? parseInt(localStorage.getItem("dlcActive")) : 1; // 0: DLC Off, 1: DLC Sometimes, 2: DLC On
 
 document.getElementById("generate-button").addEventListener("click", () => {
     console.log("Generate button clicked");
@@ -25,6 +25,7 @@ document.getElementById("remove-button").addEventListener("click", () => {
 document.getElementById("dlc-button").addEventListener("click", () => {
     console.log("DLC button clicked");
     dlcActive = (dlcActive + 1) % 3; // Cycle through 0, 1, 2
+    saveConfig(); // Store settings for next time
     updateDlcButton();
 });
 
@@ -60,6 +61,8 @@ function changeLevel(change) {
 
     // Clear recents
     recents = [];
+
+    saveConfig(); // Store settings for next time
 
     // trigger a new item generation after the level is changed
     generate();
@@ -135,6 +138,11 @@ function removeItem() {
     generate();
 }
 
+function saveConfig() {
+    localStorage.setItem("userLevel", userLevel);
+    localStorage.setItem("dlcActive", dlcActive);
+}
+
 // Fetch items.json
 fetch("./items.json")
     .then((response) => {
@@ -160,3 +168,4 @@ fetch("./items.json")
 
 // Initialize the DLC button text
 updateDlcButton();
+document.getElementById("level-text").innerText = userLevel;
