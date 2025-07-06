@@ -790,5 +790,215 @@
         "sub": "autobomb",
         "special": "ultra stamp",
         "level": "19"
+    },
+    {
+        "main": "splash-o-matic gck-o",
+        "sub": "toxic mist",
+        "special": "ink storm",
+        "level": "22",
+        "version": "10"
+    },
+    {
+        "main": "colorz aerospray",
+        "sub": "burst bomb",
+        "special": "splattercolor screen",
+        "level": "19",
+        "version": "10"
+    },
+    {
+        "main": "glamorz splattershot",
+        "sub": "burst bomb",
+        "special": "kraken royale",
+        "level": "12",
+        "version": "10"
+    },
+    {
+        "main": "splattershot pro frz-n",
+        "sub": "splat bomb",
+        "special": "tenta missiles",
+        "level": "23",
+        "version": "10"
+    },
+    {
+        "main": "clawz 96 gal",
+        "sub": "angle shooter",
+        "special": "ink vac",
+        "level": "24",
+        "version": "10"
+    },
+    {
+        "main": "jet squelcher cob-r",
+        "sub": "burst bomb",
+        "special": "triple splashdown",
+        "level": "21",
+        "version": "10"
+    },
+    {
+        "main": "gleamz blaster",
+        "sub": "squid beacon",
+        "special": "crab tank",
+        "level": "9",
+        "version": "10"
+    },
+    {
+        "main": "rapid blaster pro wnt-r",
+        "sub": "suction bomb",
+        "special": "tacticooler",
+        "level": "30",
+        "version": "10"
+    },
+    {
+        "main": "glitterz l-3 nozzlenose",
+        "sub": "splat bomb",
+        "special": "inkjet",
+        "level": "20",
+        "version": "10"
+    },
+    {
+        "main": "h-3 nozzlenose vip-r",
+        "sub": "suction bomb",
+        "special": "triple inkstrike",
+        "level": "29",
+        "version": "10"
+    },
+    {
+        "main": "carbon roller ang-l",
+        "sub": "fizzy bomb",
+        "special": "super chump",
+        "level": "23",
+        "version": "10"
+    },
+    {
+        "main": "starz dynamo roller",
+        "sub": "point sensor",
+        "special": "ink vac",
+        "level": "18",
+        "version": "10"
+    },
+    {
+        "main": "planetz big swig roller",
+        "sub": "torpedo",
+        "special": "triple splashdown",
+        "level": "21",
+        "version": "10"
+    },
+    {
+        "main": "cometz octobrush",
+        "sub": "autobomb",
+        "special": "kraken royale",
+        "level": "11",
+        "version": "10"
+    },
+    {
+        "main": "painbrush brn-z",
+        "sub": "splash wall",
+        "special": "trizooka",
+        "level": "18",
+        "version": "10"
+    },
+    {
+        "main": "splat charger cam-o",
+        "sub": "sprinkler",
+        "special": "crab tank",
+        "level": "10",
+        "version": "10"
+    },
+    {
+        "main": "splatterscope cam-o",
+        "sub": "sprinkler",
+        "special": "crab tank",
+        "level": "17",
+        "version": "10"
+    },
+    {
+        "main": "tri-slosher ash-n",
+        "sub": "splat bomb",
+        "special": "splattercolor screen",
+        "level": "19",
+        "version": "10"
+    },
+    {
+        "main": "hornz dread wringer",
+        "sub": "curling bomb",
+        "special": "crab tank",
+        "level": "20",
+        "version": "10"
+    },
+    {
+        "main": "mini splatling rtl-r",
+        "sub": "squid beacon",
+        "special": "trizooka",
+        "level": "27",
+        "version": "10"
+    },
+    {
+        "main": "torrentz hydra splatling",
+        "sub": "sprinkler",
+        "special": "big bubbler",
+        "level": "26",
+        "version": "10"
+    },
+    {
+        "main": "dapple dualies noc-t",
+        "sub": "splat bomb",
+        "special": "killer wail",
+        "level": "28",
+        "version": "10"
+    },
+    {
+        "main": "twinklez splat dualies",
+        "sub": "fizzy bomb",
+        "special": "big bubbler",
+        "level": "15",
+        "version": "10"
+    },
+    {
+        "main": "hoofz dualie squelchers",
+        "sub": "point sensor",
+        "special": "splattercolor screen",
+        "level": "17",
+        "version": "10"
+    },
+    {
+        "main": "tenta brella cre-m",
+        "sub": "toxic mist",
+        "special": "super chump",
+        "level": "25",
+        "version": "10"
+    },
+    {
+        "main": "patternz undercover brella",
+        "sub": "curling bomb",
+        "special": "killer wail",
+        "level": "27",
+        "version": "10"
+    },
+    {
+        "main": "bulbz tri-stringer",
+        "sub": "angle shooter",
+        "special": "inkjet",
+        "level": "13",
+        "version": "10"
+    },
+    {
+        "main": "reef-lux 450 mil-k",
+        "sub": "torpedo",
+        "special": "booyah bomb",
+        "level": "16",
+        "version": "10"
+    },
+    {
+        "main": "stickerz splatana stamper",
+        "sub": "autobomb",
+        "special": "booyah bomb",
+        "level": "22",
+        "version": "10"
+    },
+    {
+        "main": "splatana wiper rus-t",
+        "sub": "curling bomb",
+        "special": "trizooka",
+        "level": "14",
+        "version": "10"
     }
 ]
