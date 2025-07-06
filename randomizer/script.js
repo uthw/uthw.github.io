@@ -5,6 +5,7 @@ const maxIterationsBeforeBreak = 100000;
 let blacklist = [];
 let items = [];
 let dlcActive = 1; // 0: DLC Off, 1: DLC Sometimes, 2: DLC On
+let version = 10;
 
 document.getElementById("generate-button").addEventListener("click", () => {
     console.log("Generate button clicked");
@@ -26,6 +27,11 @@ document.getElementById("dlc-button").addEventListener("click", () => {
     console.log("DLC button clicked");
     dlcActive = (dlcActive + 1) % 3; // Cycle through 0, 1, 2
     updateDlcButton();
+});
+document.getElementById("version-button").addEventListener("click", () => {
+    console.log("Version button clicked");
+    version = version === 10 ? 9 : 10; // Cycle between versions 9- and 10+
+    document.getElementById("version-button").innerText = `Version: ${version}`;
 });
 
 function updateDlcButton() {
@@ -77,14 +83,12 @@ function generate() {
     // generate until something is found that meets criteria
     while (
         item.level > userLevel ||
+        item.version > version ||
         blacklist.includes(item.main) ||
-        recents.includes(item.main)
+        recents.includes(item.main) ||
+        (item.weight && Math.random() > item.weight)
     ) {
         item = getRandomItem();
-        // console.log(
-        //     `item level is ${item.level} and user level is ${userLevel}`
-        // );
-
         iterations++;
         if (iterations > maxIterationsBeforeBreak) break; // failsafe
     }
@@ -100,6 +104,7 @@ function generate() {
         recents.shift();
     }
 
+    // convert to dlc when appropriate
     if (item.dlc && dlcActive == 2) {
         document.getElementById("item-name").innerText = item.dlc;
         document.getElementById(
